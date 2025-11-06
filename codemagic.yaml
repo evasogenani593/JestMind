@@ -1,0 +1,44 @@
+workflows:
+  ios-native-workflow:
+    name: iOS Native
+    max_build_duration: 120
+    integrations:
+      app_store_connect: Jestermind Riddles
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.appoksanababych
+      vars:
+        BUNDLE_ID: "com.appoksanababych"
+        XCODE_PROJECT: "CipherWord.xcodeproj"
+        XCODE_SCHEME: "CipherWord"
+        APP_STORE_APPLE_ID: 6754969040
+        TEAM_ID: "FPA6N2Q8AH"
+      xcode: 16.3
+    scripts:
+      - name: Set up provisioning profiles settings on Xcode project
+        script: xcode-project use-profiles
+
+      - name: Build ipa for distribution
+        script: |
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+    publishing:
+      email:
+        recipients:
+          - evasogenani593@gmail.com
+        notify:
+          success: true
+          failure: false
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false
+        submit_to_app_store: false
