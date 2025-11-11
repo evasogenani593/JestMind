@@ -133,6 +133,28 @@ struct WelcomeView: View {
                             }
                         }
                         
+                        NavigationLink(destination: InfoView()) {
+                            VStack(spacing: 8) {
+                                Image(systemName: "info.circle.fill")
+                                    .font(.system(size: 28))
+                                    .foregroundStyle(
+                                        LinearGradient(
+                                            gradient: Gradient(colors: [
+                                                Color("accentYellow"),
+                                                Color("primaryRed")
+                                            ]),
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    )
+                                    .shadow(color: Color("accentYellow").opacity(0.5), radius: 5)
+                                
+                                Text("Info")
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundColor(.white.opacity(0.8))
+                            }
+                        }
+                        
                         NavigationLink(destination: ProfileView()) {
                             VStack(spacing: 8) {
                                 Image(systemName: "person.fill")

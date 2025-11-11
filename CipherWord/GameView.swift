@@ -147,7 +147,7 @@ struct GameView: View {
                         }
                     }
                 }
-                .padding(.vertical, 24)
+                .padding(24)
                 
                 Spacer()
                 
@@ -226,7 +226,7 @@ struct GameCellView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 .fill(cellBackgroundColor)
-                .frame(width: 64, height: 64)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
                         .stroke(cellBorderColor, lineWidth: cell.state == .empty ? 2 : 0)
