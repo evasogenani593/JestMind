@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		27C758BA2ED4936F00E073F3 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 27C758B92ED4936F00E073F3 /* AppsFlyerLib */; };
+		27C758BD2ED4937700E073F3 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27C758BC2ED4937700E073F3 /* DeviceKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		27DFD15A2EBB7E9F00EEC7A8 /* CipherWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CipherWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		27C758BF2ED4938E00E073F3 /* Exceptions for "CipherWord" folder in "CipherWord" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 27DFD1592EBB7E9F00EEC7A8 /* CipherWord */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		27DFD15C2EBB7E9F00EEC7A8 /* CipherWord */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				27C758BF2ED4938E00E073F3 /* Exceptions for "CipherWord" folder in "CipherWord" target */,
+			);
 			path = CipherWord;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C758BA2ED4936F00E073F3 /* AppsFlyerLib in Frameworks */,
+				27C758BD2ED4937700E073F3 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,8 @@
 			);
 			name = CipherWord;
 			packageProductDependencies = (
+				27C758B92ED4936F00E073F3 /* AppsFlyerLib */,
+				27C758BC2ED4937700E073F3 /* DeviceKit */,
 			);
 			productName = CipherWord;
 			productReference = 27DFD15A2EBB7E9F00EEC7A8 /* CipherWord.app */;
@@ -94,6 +116,10 @@
 			);
 			mainGroup = 27DFD1512EBB7E9F00EEC7A8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				27C758B82ED4936F00E073F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				27C758BB2ED4937700E073F3 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27DFD15B2EBB7E9F00EEC7A8 /* Products */;
 			projectDirPath = "";
@@ -249,12 +275,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CipherWord/CipherWord.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CipherWord/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JestMind;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need permission to access your camera so you can take a new picture or choose one from your gallery for your profile photo.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This information is used for app analytics and to improve the app in the future.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -265,7 +295,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appoksanababych;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -284,12 +314,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CipherWord/CipherWord.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CipherWord/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JestMind;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need permission to access your camera so you can take a new picture or choose one from your gallery for your profile photo.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This information is used for app analytics and to improve the app in the future.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,7 +334,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appoksanababych;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -336,6 +370,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27C758B82ED4936F00E073F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.7;
+			};
+		};
+		27C758BB2ED4937700E073F3 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27C758B92ED4936F00E073F3 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27C758B82ED4936F00E073F3 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		27C758BC2ED4937700E073F3 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27C758BB2ED4937700E073F3 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27DFD1522EBB7E9F00EEC7A8 /* Project object */;
 }
